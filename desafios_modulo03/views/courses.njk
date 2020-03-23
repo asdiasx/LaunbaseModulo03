@@ -9,41 +9,23 @@
         <h1>Principais cursos:</h1>
     </div>
     <section class="cards">
-        <div class="card" id="starter">
-            <div class="card__logo">
-                <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="logo_Starter"/>
+
+        {% for link in links %}
+            <div class="card" id="{{ link.id }}">
+                <div class="card__logo">
+                    <img src="{{ link.img_url }}" alt="{{ link.alt_img }}"/>
+                </div>
+                <div class="card__modules">
+                    <p>{{ link.modules }}
+                        Módulos</p>
+                </div>
+                <div class="card__category">
+                    <p>{{ link.category }}</p>
+                </div>
             </div>
 
-            <div class="card__modulos">
-                <p>4 Módulos</p>
-            </div>
-            <div class="card__categoria">
-                <p>Grátis</p>
-            </div>
-        </div>
-        <div class="card" id="launchbase">
-            <div class="card__logo">
-                <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="logo_Launchbase"/>
-            </div>
-            <div class="card__modulos">
-                <p>46 Módulos</p>
-            </div>
-            <div class="card__categoria">
-                <p>Pago</p>
-            </div>
-        </div>
-        <div class="card" id="gostack">
-            <div class="card__logo">
-                <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="logo_GoStack"/>
-            </div>
+        {% endfor %}
 
-            <div class="card__modulos">
-                <p>54 Módulos</p>
-            </div>
-            <div class="card__categoria">
-                <p>Pago</p>
-            </div>
-        </div>
     </section>
     <div class="modal-overlay">
         <div class="modal">

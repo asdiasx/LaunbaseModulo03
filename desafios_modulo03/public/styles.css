@@ -1,138 +1,148 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap';
 :root {
-    --color-blue: rgb(32, 36, 88);
+    --color-background: rgb(0, 0, 60);
+    --color-background-darker: rgba(0, 0, 0, 0.25);
+    --color-text: rgb(200, 200, 200)
 }
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0 2px;
     border: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto';
-    background: var(--color-blue);
-    color: whitesmoke;
+    background: var(--color-background);
+    color: var(--color-text);
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    min-height: 100vh;
 }
 
-header {
-    padding: 30px;
-    text-align: center;
-    border-bottom: rgb(100, 100, 100) solid 2px;
-    background: rgba(0, 0, 0, 0.23);
+.headfoot {
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    background: var(--color-background-darker);
+    border-bottom: var(--color-text) solid 1px;
+    border-top: var(--color-text) solid 1px;
 }
 
-header div a {
-    padding-right: 30px;
-    font-size: 20px;
+.header {
+    top: 0px;
+}
+
+.footer {
+    bottom: 0px;
+}
+
+.links {
+    max-width: 800px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.links a {
+    font-size: 16px;
     text-decoration: none;
-    color: rgb(150, 150, 150);
+    color: rgb(200, 200, 200);
 }
 
-header div a:hover {
-    color: rgb(38, 165, 7);
+.links a:hover {
+    font-weight: bold;
+    color: rgb(0, 148, 145);
 }
 
 .logo {
     text-align: center;
-    margin: 32px;
-    border-bottom: 2px solid rgb(87, 86, 86);
+    margin: 32px 0;
+    border-bottom: 2px solid rgb(80, 80, 80);
 }
 
 .logo img {
+    width: 300px;
+    height: auto;
     border-radius: 50%;
-    border: 6px solid green;
+    border: 5px solid rgb(0, 148, 145);
     margin: 32px auto;
 }
 
 .logo h1 {
-    font-size: 45px;
+    font-size: 42px;
     font-weight: bold;
-    line-height: 55px;
+    line-height: 52px;
     margin-bottom: 32px;
 }
 
 .empresa {
     max-width: 800px;
     margin: 32px auto;
-    line-height: 34px;
-    opacity: 0.8;
+    opacity: 90%;
 }
 
 .empresa h2 {
-    font-size: 24px;
+    font-weight: normal;
+    font-size: 22px;
     text-align: justify;
 }
 
-.empresa ul,
-p {
-    margin-top: 32px;
+.empresa p {
+    margin-top: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
+}
+
+.empresa ul {
+    margin-top: 15px;
     list-style: none;
-}
-
-.barra-links {
-    max-width: 800px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 130px 130px 130px 130px 130px;
-    column-gap: 30px;
-    margin-top: 128px;
-}
-
-.links a {
-    text-decoration: none;
-    color: whitesmoke;
-    text-align: center;
     font-size: 18px;
-    line-height: 46px;
-    font-weight: normal;
-    border-bottom: 3px solid whitesmoke;
-    padding: 5px 20px;
-}
-
-.links a:hover {
     text-align: center;
-    font-size: 22px;
-    line-height: 32px;
-    font-weight: bold;
-    color: rgb(16, 245, 8);
-    border-bottom: 8px solid rgb(16, 245, 8);
-    transition: all 200ms;
 }
 
 
-/* === Desafio 3 === */
+/* === challenge  2-3 === */
 
 #wrapper h1 {
-    margin: 64px 64px 128px;
+    text-align: center;
+    margin: 64px auto 80px;
     font-size: 42px;
     line-height: 52px;
 }
 
 .cards {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
-    column-gap: 60px;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .card {
-    background-color: var(--color-blue);
+    background-color: rgb(40, 40, 185);
+    width: 260px;
     border-radius: 20px;
-    filter: brightness(150%);
-    padding: 15px;
-    position: relative;
+    padding: 10px;
+    margin: 10px;
     cursor: pointer;
+    text-align: center;
 }
 
-.card__categoria p {
+.card p {
+    margin: 20px 0 0;
+}
+
+.card__category {
     background-color: rgba(84, 155, 13, 0.671);
     width: 100px;
-    /* margin: auto; */
+    margin: auto;
+    /* text-justify: center; */
     font-size: 18px;
     line-height: 28px;
     border-radius: 50px;
@@ -176,11 +186,4 @@ iframe {
     position: absolute;
     top: 5%;
     left: 5%;
-}
-
-#voltar {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
