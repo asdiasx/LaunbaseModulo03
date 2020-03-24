@@ -14,7 +14,8 @@ The company and links can be easily customized with minor changes on `.njk` file
 
 These are the purpose o other files to be customized:
 
-* data.js : Links for each item of portfolio/courses.
+* company.js : Company data for about page.
+* portfolio_items.js : Links for each item of portfolio/courses.
 * menu.js : Links/Routes for each item of the header and footer.
 * .ico and .png files are for favorite and logo images customization.
 

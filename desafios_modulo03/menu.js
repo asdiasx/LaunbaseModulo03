@@ -21,7 +21,7 @@ module.exports = {
         }
     ],
     footer: [{
-            url: "/courses",
+            url: "/portfolio",
             target: "",
             label: "Conteúdos"
         },

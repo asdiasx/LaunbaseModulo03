@@ -1,29 +1,26 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-    <title>Seek4K - Sobre</title>
+    <title>{{ companyData.companyName }}
+        - Sobre</title>
 {% endblock %}
 
 {% block content %}
 
     <div class="logo">
-        <img src="./blue_flame.png" alt="logo-empresa"/>
-        <h1>Seek4K</h1>
+        <img src="./logo.png" alt="logo-empresa"/>
+        <h1>{{ companyData.companyName }}</h1>
 
     </div>
     <div class="empresa">
         <h2>
-            A Seek4K é empresa de tecnologia situada em Curitiba, dedicada ao desenvolvimento de soluções que atendam às necessidades dos nossos clientes, utilizando as tecnologias mais adequadas à cada caso.
+            {{ companyData.companyDesc }}
         </h2>
         <p>Principais tecnologias utilizadas em nossos projetos:</p>
         <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Node.JS</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
+            {% for item in companyData.companyTec %}
+                <li>{{ item }}</li>
+            {% endfor %}
         </ul>
     </div>
 

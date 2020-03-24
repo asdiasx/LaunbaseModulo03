@@ -1,8 +1,9 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 
-const links = require("./data");
+const links = require("./portfolio_items");
 const menu = require("./menu");
+const companyData = require("./company");
 
 const server = express();
 
@@ -15,9 +16,11 @@ nunjucks.configure("views", {
     autoescape: true
 });
 
-server.get("/", (req, res) => res.render("about", { menu }));
+server.get("/", (req, res) => res.render("about", { menu, companyData }));
 
-server.get("/courses", (req, res) => res.render("courses", { links, menu }));
+server.get("/portfolio", (req, res) =>
+    res.render("portfolio", { links, menu })
+);
 
 server.use((req, res) => res.status(404).render("not-found", { menu }));
 
