@@ -3,7 +3,7 @@
 
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"/>
-        <link rel="icon" href="./myfavicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="./blue_flame.ico" type="image/x-icon"/>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="styles.css"/>
@@ -16,10 +16,9 @@
     <body>
         <header class="headfoot header">
             <div class="links">
-                <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Comunidade</a>
-                <a href="mailto:oi@rocketseat.com.br?subject=From Page Desafio1&body=Texto padrao de teste." target="_blank">Email</a >
-                <a href="tel:+5547992078767" target="_blank">Telefone</a>
-                <a href="/">Sobre</a>
+                {% for item in menu.header %}
+                    <a href="{{ item.url }}" target="{{ item.target }}">{{ item.label }}</a>
+                {% endfor %}
             </div>
         </header>
 
@@ -29,11 +28,9 @@
 
         <footer class="headfoot footer">
             <div class="links">
-                <a href="/courses">Conteúdos</a>
-                <a href="/" target="_blank">GitHub</a>
-                <a href="/" target="_blank">Instagram</a>
-                <a href="/" target="_blank">Facebook</a>
-                <a href="/">Voltar</a>
+                {% for item in menu.footer %}
+                    <a href="{{ item.url }}" target="{{ item.target }}">{{ item.label }}</a>
+                {% endfor %}
             </div>
         </footer>
     </body>
