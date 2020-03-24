@@ -5,12 +5,12 @@ module.exports = {
             label: "Comunidade"
         },
         {
-            url: "mailto:oi@rocketseat.com.br?subject=From Page Desafio1&body=Texto padrao de teste.",
+            url: "mailto:email@gmail.com?subject=From Page Desafio1&body=Texto padrao de teste.",
             target: "_blank",
             label: "Email"
         },
         {
-            url: "tel:+5547992078767",
+            url: "tel:+5521999999999",
             target: "_blank",
             label: "Telefone"
         },
