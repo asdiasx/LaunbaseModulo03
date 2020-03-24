@@ -2,6 +2,7 @@ const express = require("express");
 const nunjucks = require("nunjucks");
 
 const links = require("./data");
+const menu = require("./menu");
 
 const server = express();
 
@@ -14,18 +15,10 @@ nunjucks.configure("views", {
     autoescape: true
 });
 
-server.get("/", function(req, res) {
-    return res.render("about");
-});
+server.get("/", (req, res) => res.render("about", { menu }));
 
-server.get("/courses", function(req, res) {
-    return res.render("courses", { links });
-});
+server.get("/courses", (req, res) => res.render("courses", { links, menu }));
 
-server.use(function(req, res) {
-    return res.status(404).render("not-found");
-});
+server.use((req, res) => res.status(404).render("not-found", { menu }));
 
-server.listen(5000, function() {
-    console.log("Server Running");
-});
+server.listen(5000, "0.0.0.0", () => console.log("Server Running"));
