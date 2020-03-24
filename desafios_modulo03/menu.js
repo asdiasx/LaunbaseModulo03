@@ -1,49 +1,49 @@
 module.exports = {
     header: [{
             url: "https://discordapp.com/invite/gCRAFhc",
-            target: "_blank",
+            new_page: true,
             label: "Comunidade"
         },
         {
             url: "mailto:email@gmail.com?subject=From Page Desafio1&body=Texto padrao de teste.",
-            target: "_blank",
+            new_page: true,
             label: "Email"
         },
         {
             url: "tel:+5521999999999",
-            target: "_blank",
+            new_page: true,
             label: "Telefone"
         },
         {
             url: "/",
-            target: "",
+            new_page: false,
             label: "Sobre"
         }
     ],
     footer: [{
             url: "/portfolio",
-            target: "",
+            new_page: false,
             label: "Conteúdos"
         },
 
         {
             url: "https://github.com/asdiasx",
-            target: "_blank",
+            new_page: true,
             label: "Github"
         },
         {
             url: "https://www.linkedin.com/in/adriano-d-6783a2/",
-            target: "_blank",
+            new_page: true,
             label: "Linkedin"
         },
         {
             url: "https://twitter.com/Dragodian",
-            target: "_blank",
+            new_page: true,
             label: "Twitter"
         },
         {
             url: "/",
-            target: "",
+            new_page: false,
             label: "Voltar"
         }
     ]

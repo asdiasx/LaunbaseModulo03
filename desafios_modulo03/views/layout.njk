@@ -17,7 +17,7 @@
         <header class="headfoot header">
             <div class="links">
                 {% for item in menu.header %}
-                    <a href="{{ item.url }}" target="{{ item.target }}">{{ item.label }}</a>
+                    <a href="{{ item.url }}" {{ 'target="_blank"' if item.new_page }}>{{ item.label }}</a>
                 {% endfor %}
             </div>
         </header>
@@ -29,7 +29,7 @@
         <footer class="headfoot footer">
             <div class="links">
                 {% for item in menu.footer %}
-                    <a href="{{ item.url }}" target="{{ item.target }}">{{ item.label }}</a>
+                    <a href="{{ item.url }}" {{ 'target="_blank"' if item.new_page }}>{{ item.label }}</a>
                 {% endfor %}
             </div>
         </footer>
