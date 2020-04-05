@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap';
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
 :root {
     --color-green: #50fa7b;
     --color-rocket: #7159c1;
@@ -12,7 +12,7 @@
 
 body {
     background: #282a36;
-    font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
     color: white;
 }
 
@@ -55,7 +55,7 @@ header {
     font-size: 42px;
     line-height: 52px;
     font-weight: bold;
-    color: var(--color-rocket)
+  color: white;
 }
 
 #wrapper h2 {
@@ -81,7 +81,6 @@ header {
     border-bottom: 1px solid var(--color-green);
 }
 
-
 /* === Cards === */
 
 .cards {
@@ -94,8 +93,8 @@ header {
 
 .card {
     background-color: var(--color-rocket);
-    display: grid;
-    grid-template-rows: 142px 1fr 78px;
+  display: flex;
+  flex-direction: column;
     cursor: pointer;
 }
 
@@ -105,6 +104,7 @@ header {
 
 .card__content {
     padding: 24px;
+  height: 120px;
 }
 
 .card__info {
@@ -121,7 +121,6 @@ header {
     border-radius: 40px;
     text-align: center;
 }
-
 
 /* === Modal === */
 
@@ -150,7 +149,6 @@ header {
     top: 8px;
     cursor: pointer;
 }
-
 
 /* === MODAL.ACTIVE === */
 
@@ -181,4 +179,23 @@ iframe {
     top: -11px;
     padding: 2px 8px;
     border-radius: 20px;
+}
+
+/*=== Video ===*/
+
+.video {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card__video-container {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.card__video-container iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
 }
