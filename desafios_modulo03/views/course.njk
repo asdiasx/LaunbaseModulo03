@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+    <title>{{ companyData.companyName }}
+        -
+        {{ name }}</title>
+{% endblock %}
+
+{% block content %}
+
+    <div id="title_course">
+        <h1>{{ name }}</h1>
+    </div>
+
+    <section>
+        <div class="page">
+            <iframe src="https://rocketseat.com.br/{{id}}" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    {% endblock%}
